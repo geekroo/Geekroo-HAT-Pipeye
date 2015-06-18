@@ -35,5 +35,5 @@ fi
 if [ -z "$c1" ]; then
   sed -i "$numfinala sudo pigpiod" /etc/rc.local
 fi
-echo "Please Run sudo reboot!"
-echo "After reboot you shoud run sudo python /usr/bin/pipeyecon.py"
+echo "Please Run sudo reboot to restart your Raspberry Pi!"
+echo "After reboot, please run sudo python /usr/bin/pipeyecon.py to have fun :)"
