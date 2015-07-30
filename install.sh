@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "Step 1:Update System Package"
+echo "Step 1: Update software package lists"
 sudo apt-get update
-echo "Step 2:Install PiGPIO"
+echo "Step 2: Install PiGPIO"
 cd ~
 wget abyz.co.uk/rpi/pigpio/pigpio.zip
 unzip pigpio.zip
@@ -11,15 +11,15 @@ sudo make install
 cd ..
 rm ./pigpio.zip
 rm -rf PIGPIO
-echo "Step 3:Install Python Packages"
+echo "Step 3: Install Python Packages"
 sudo apt-get -y install python-netifaces python-psutil
-echo "Step 4:Install pipeye"
-git clone https://github.com/FishTest/pipeye.git
+echo "Step 4:Install pipeye software"
+git clone https://github.com/geekroo/Geekroo-HAT-Pipeye.git
 cd pipeye
 sudo cp pipeye.py /usr/bin/
 sudo cp pipeyecon.py /usr/bin/
 cd ..
-echo "Step 4:Install Services"
+echo "Step 4: Install Services"
 c3=$(grep -n '/var/pipeyelog' /etc/fstab)
 c2=$(grep -n '^sudo python /usr/bin/pipeye.py' /etc/rc.local)
 c1=$(grep -n '^sudo pigpiod' /etc/rc.local)
