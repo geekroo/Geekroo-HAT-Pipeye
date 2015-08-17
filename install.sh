@@ -15,7 +15,7 @@ echo "Step 3: Install Python Packages"
 sudo apt-get -y install python-netifaces python-psutil
 echo "Step 4:Install pipeye software"
 git clone https://github.com/geekroo/Geekroo-HAT-Pipeye.git
-cd pipeye
+cd Geekroo-HAT-Pipeye
 sudo cp pipeye.py /usr/bin/
 sudo cp pipeyecon.py /usr/bin/
 cd ..
